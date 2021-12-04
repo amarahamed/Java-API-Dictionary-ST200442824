@@ -40,6 +40,15 @@ public class WordMoreDetailsViewController implements Initializable {
     @FXML
     private ListView<Definition> definitionsListView;
 
+    @FXML
+    private Label synonymLabel;
+
+    @FXML
+    private Label antonymLabel;
+
+    @FXML
+    private Label definitionLabel;
+
     public void getSelectedWord(Word word) {
 
         titleLabel.setText("More Details For " + word.getWord());
@@ -61,12 +70,17 @@ public class WordMoreDetailsViewController implements Initializable {
 
         if(antonymsListView.getItems().size() == 0) {
             antonymsListView.getItems().add("NO ANTONYMS FOUND FOR WORD : " + word.getWord());
+        } else {
+            antonymLabel.setText("Antonyms: " + antonymsListView.getItems().size());
         }
 
         if(synonymsListView.getItems().size() == 0) {
             synonymsListView.getItems().add("NO SYNONYMS FOUND FOR WORD : " + word.getWord());
+        } else {
+            synonymLabel.setText("Synonyms: " + synonymsListView.getItems().size());
         }
 
+        definitionLabel.setText("Definitions: " + definitionsListView.getItems().size());
     }
 
     @Override

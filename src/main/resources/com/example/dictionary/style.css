@@ -34,3 +34,6 @@
     -fx-font-size: 14px;
     -fx-font-family: "Monospaced";
 }
+.list-view-label {
+    -fx-font-size: 15px;
+}

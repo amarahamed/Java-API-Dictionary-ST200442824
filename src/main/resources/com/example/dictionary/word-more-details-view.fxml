@@ -52,20 +52,20 @@
                   </GridPane>
                   <VBox layoutX="10.0" layoutY="416.0" spacing="10.0">
                      <children>
-                        <Label styleClass="label-style" text="Definitions" />
-                        <ListView fx:id="definitionsListView" />
+                        <Label fx:id="definitionLabel" styleClass="label-style" text="Definitions" />
+                        <ListView fx:id="definitionsListView" styleClass="list-view-label" />
                      </children>
                   </VBox>
                   <VBox spacing="10.0">
                      <children>
-                        <Label styleClass="label-style" text="Synonyms" />
-                        <ListView fx:id="synonymsListView" />
+                        <Label fx:id="synonymLabel" styleClass="label-style" text="Synonyms" />
+                        <ListView fx:id="synonymsListView" styleClass="list-view-label" />
                      </children>
                   </VBox>
                   <VBox spacing="10.0">
                      <children>
-                        <Label styleClass="label-style" text="Antonyms" />
-                        <ListView fx:id="antonymsListView" />
+                        <Label fx:id="antonymLabel" styleClass="label-style" text="Antonyms" />
+                        <ListView fx:id="antonymsListView" styleClass="list-view-label" />
                      </children>
                   </VBox>
                </children>
@@ -80,7 +80,7 @@
          <bottom>
             <Button mnemonicParsing="false" onAction="#backToSearchView" text="Search" BorderPane.alignment="CENTER">
                <BorderPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="10.0" />
                </BorderPane.margin></Button>
          </bottom>
       </BorderPane>
