@@ -28,7 +28,7 @@
 }
 .error-label {
     -fx-text-fill: red;
-    -fx-font-size: 13px;
+    -fx-font-size: 14px;
 }
 .input-text {
     -fx-font-size: 14px;

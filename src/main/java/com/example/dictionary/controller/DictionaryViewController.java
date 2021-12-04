@@ -38,6 +38,9 @@ public class DictionaryViewController implements Initializable {
     @FXML
     private Label errorLabel;
 
+    @FXML
+    private Label wordFoundLabel;
+
     // btn click event - clear All
     @FXML
     private void clearAll(ActionEvent event) {
@@ -67,7 +70,8 @@ public class DictionaryViewController implements Initializable {
         wordColumn.setCellValueFactory(new PropertyValueFactory<>("word"));
         phoneticColumn.setCellValueFactory(new PropertyValueFactory<>("phonetic"));
         originColumn.setCellValueFactory(new PropertyValueFactory<>("origin"));
-
+        tableView.setVisible(false);
+        wordFoundLabel.setText("Words found: 0");
     }
 
     @FXML
@@ -78,9 +82,13 @@ public class DictionaryViewController implements Initializable {
         } else {
             Word[] fetched = APIUtility.getMeaningFromAPI(searchInput.getText());
             if(fetched != null) {
+                tableView.setVisible(true);
                 tableView.getItems().addAll(fetched);
+                wordFoundLabel.setText("Words found: " + tableView.getItems().size());
             } else {
+                tableView.setVisible(false);
                 errorLabel.setText("No results found for " + searchInput.getText());
+                wordFoundLabel.setText("Words found: 0");
             }
         }
     }
