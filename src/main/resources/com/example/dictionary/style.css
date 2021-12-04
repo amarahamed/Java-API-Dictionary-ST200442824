@@ -1,0 +1,36 @@
+.root {
+    -fx-background-color: linear-gradient(from 10px 10px to 600px 600px, #757F9A, #D7DDE8);
+    -fx-font-family: "Arial Unicode MS";
+}
+.title-label {
+    -fx-font-size: 28px;
+    -fx-text-fill: #333;
+}
+.label-style {
+    -fx-font-size: 18px;
+    -fx-text-fill: #333;
+}
+
+.button {
+    -fx-background-color: transparent;
+    -fx-border-width: 1px;
+    -fx-border-color: #333;
+    -fx-text-fill: #333;
+    -fx-font-size: 18px;
+    -fx-padding: 2px 20px;
+}
+.button:hover {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #333;
+}
+.column-label {
+    -fx-font-size: 16px;
+}
+.error-label {
+    -fx-text-fill: red;
+    -fx-font-size: 13px;
+}
+.input-text {
+    -fx-font-size: 14px;
+    -fx-font-family: "Monospaced";
+}

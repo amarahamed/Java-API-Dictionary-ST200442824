@@ -1,10 +1,8 @@
 package com.example.dictionary.models;
 
 public class Definition {
-
     private String definition, example;
-    private String[] synonyms;
-    private String[]  antonyms;
+    private String[] synonyms, antonyms;
 
     public String getDefinition() {
         return definition;
@@ -36,5 +34,13 @@ public class Definition {
 
     public void setAntonyms(String[] antonyms) {
         this.antonyms = antonyms;
+    }
+
+    @Override
+    public String toString() {
+        if(example == null) {
+            example = "No examples found";
+        }
+        return String.format("Definition: %s, Example: %s", this.definition, this.example);
     }
 }

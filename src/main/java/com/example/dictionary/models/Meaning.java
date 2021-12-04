@@ -19,4 +19,9 @@ public class Meaning {
     public void setDefinitions(Definition[] definitions) {
         this.definitions = definitions;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Part of speech: %s", partOfSpeech);
+    }
 }
